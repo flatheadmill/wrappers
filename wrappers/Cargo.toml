@@ -17,6 +17,7 @@ pg15 = ["pgrx/pg15", "pgrx-tests/pg15", "supabase-wrappers/pg15" ]
 pg_test = []
 
 helloworld_fdw = []
+opensearch_fdw = []
 bigquery_fdw = ["gcp-bigquery-client", "serde_json", "serde", "wiremock", "futures", "yup-oauth2"]
 clickhouse_fdw = ["clickhouse-rs", "chrono", "chrono-tz", "regex"]
 stripe_fdw = ["reqwest", "reqwest-middleware", "reqwest-retry", "serde_json"]
