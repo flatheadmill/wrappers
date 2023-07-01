@@ -41,3 +41,9 @@ cfg_if! {
         mod s3_fdw;
     }
 }
+
+cfg_if! {
+    if #[cfg(feature = "opensearch_fdw")] {
+        mod opensearch_fdw;
+    }
+}
