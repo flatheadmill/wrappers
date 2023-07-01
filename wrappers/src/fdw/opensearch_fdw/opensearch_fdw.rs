@@ -58,10 +58,12 @@ impl ForeignDataWrapper for OpenSearchFdw {
             for tgt_col in &self.tgt_cols {
                 match tgt_col.name.as_str() {
                     "id" => row.push("id", Some(Cell::I64(self.row_cnt))),
-                    "col" => row.push("col", Some(Cell::String("Hello world".to_string()))),
+                    "col" => row.push("col", Some(Cell::String("Hello, world.".to_string()))),
                     _ => {}
                 }
             }
+
+            log_debug1("hello, world");
 
             self.row_cnt += 1;
 
